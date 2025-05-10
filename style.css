@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1C1C1E, #2C2C2E);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .calculadora {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    padding: 25px;
+    width: 100%;
+    max-width: 340px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .display {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 2.8rem;
+    text-align: right;
+    padding: 20px 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    min-height: 60px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 8px rgba(255,255,255,0.05);
+  }
+  
+  .botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  button {
+    padding: 22px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+  
+  /* Efeito de botão pressionado */
+  button:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .igual {
+    background-color: #30D158;
+    color: black;
+  }
+  
+  .igual:hover {
+    background-color: #34E17A;
+  }
+  
+  @media (max-width: 480px) {
+    .display {
+      font-size: 2.2rem;
+      padding: 16px;
+    }
+  
+    button {
+      padding: 18px;
+      font-size: 1.1rem;
+    }
+  }
+  
